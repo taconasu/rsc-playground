@@ -12,6 +12,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
+    "test-ui": "vitest --ui",
     "test:run": "vitest run",
     "coverage": "vitest run --coverage"
   },
@@ -28,6 +29,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^4.5.2",
+    "@vitest/ui": "^3.2.3",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
     "tailwindcss": "^4",
