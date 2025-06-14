@@ -6,20 +6,22 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   plugins: [react()],
   test: {
-    environment: "node",
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-    include: ["./src/**/*.test.ts?(x)"],
     projects: [
       {
         test: {
-          name: {
-            label: "unit",
-            color: "red",
+          name: { label: "unit", color: "blue" },
+          environment: "node",
+          alias: {
+            "@": path.resolve(__dirname, "./src"),
           },
+          include: ["./src/**/*.test.ts?(x)"],
         },
       },
     ],
+    coverage: {
+      provider: "v8",
+      include: ["src/**"],
+      extension: [".ts"],
+    },
   },
 });
