@@ -17,6 +17,17 @@ export default defineConfig({
           include: ["./src/**/*.test.ts?(x)"],
         },
       },
+      {
+        test: {
+          name: { label: "compnent", color: "green" },
+          environment: "jsdom",
+          globals: true,
+          alias: {
+            "@": path.resolve(__dirname, "./src"),
+          },
+          include: ["./src/**/*.spec.ts?(x)"],
+        },
+      },
     ],
     coverage: {
       provider: "v8",
